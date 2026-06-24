@@ -1,0 +1,11 @@
+config.json
+notes/
+*.local.json
+.save-claude-notes.lock/
+.DS_Store
+.env
+.env.*
+!.env.example
+.idea/
+__pycache__/
+*.py[cod]

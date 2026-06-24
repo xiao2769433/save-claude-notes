@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+      - name: Shell syntax check
+        run: |
+          bash -n scripts/save-claude-notes.sh
+          bash -n tests/test-save-claude-notes.sh
+      - name: Run tests
+        run: bash tests/test-save-claude-notes.sh
+      - name: ShellCheck
+        run: shellcheck scripts/save-claude-notes.sh tests/test-save-claude-notes.sh

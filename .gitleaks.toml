@@ -1,0 +1,8 @@
+title = "save-claude-notes gitleaks config"
+
+[allowlist]
+description = "Allow documented placeholder values"
+regexes = [
+  '''sk-proj-example-secret-token-value''',
+  '''ghp_EXAMPLE'''
+]

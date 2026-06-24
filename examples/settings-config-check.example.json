@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/skills/save-claude-notes/scripts/save-claude-notes.sh --print-config >/dev/null",
+            "timeout": 10,
+            "statusMessage": "Checking save-claude-notes config..."
+          }
+        ]
+      }
+    ]
+  }
+}
